@@ -25,7 +25,7 @@ chmod u+x openvpn-install.sh
 sudo AUTO_INSTALL=y APPROVE_INSTALL=y ENDPOINT=$(curl -4 ifconfig.co) APPROVE_IP=y IPV6_SUPPORT=n PORT_CHOICE=2 PORT=2222 PROTOCOL_CHOICE=1 DNS=8 COMPRESSION_ENABLED=n CUSTOMIZE_ENC=n CLIENT=user PASS=1 ./openvpn-install.sh
 
 # Move OpenVPN config to root folder of ubuntu user
-mv user.ovpn /home/ubuntu/
+mv /root/user.ovpn /home/ubuntu/
 
 # Copy OpenVPN config to local machine
 # ssh -i ~/.ssh/app_key.pem ubuntu@SERVER_IP_ADDRESS 'sudo cat /home/ubuntu/user.ovpn' > ~/user.ovpn
