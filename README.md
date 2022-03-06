@@ -8,15 +8,15 @@ Author of OpenVPN installer: [@angristan](https://github.com/angristan/openvpn-i
 
 ## Default configuration of EC2 instance:
 
-| Option        | Value                                                    |
-| ------------- | -------------------------------------------------------- |
-| Region        | us-east-2                                                |
-| Instance type | t2.micro                                                 |
-| AWS user      | student                                                  |
-| Open port     | 22 - your own Public IP; 2222 - default port for OpenVPN |
-| SSH key name  | app_key.pub                                              |
-| Volume type   | gp2                                                      |
-| Volume size   | 8 GB                                                     |
+| Option        | Value                                                                                                                                                                                                                                                                                                           |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| AWS user      | [student](https://github.com/OlesYudin/VPN-Config/blob/main/variables.tf#:~:text=variable%20%22profile%22%20%7B,%7D "student")                                                                                                                                                                                  |
+| Region        | [us-east-2](https://github.com/OlesYudin/VPN-Config/blob/main/variables.tf#:~:text=variable%20%22region%22%20%7B,%7D "us-east-2")                                                                                                                                                                               |
+| Instance type | [t2.micro](https://github.com/OlesYudin/VPN-Config/blob/main/variables.tf#:~:text=variable%20%22instance_type%22%20%7B,%7D "t2.micro")                                                                                                                                                                          |
+| Open port     | [22](https://github.com/OlesYudin/VPN-Config/blob/main/variables.tf#:~:text=%2222%22%20%20%20%3D%20%5B%22X.X.X.X/32%22%5D "22") - your own Public IP; [2222](https://github.com/OlesYudin/VPN-Config/blob/main/variables.tf#:~:text=%222222%22%20%3D%20%5B%220.0.0.0/0%22%5D "2222") - default port for OpenVPN |
+| SSH key name  | [app_key.pub](https://github.com/OlesYudin/VPN-Config/blob/main/variables.tf#:~:text=variable%20%22ssh_key%22%20%7B,%7D "app_key.pub")                                                                                                                                                                          |
+| Volume type   | [gp2](https://github.com/OlesYudin/VPN-Config/blob/main/main.tf#:~:text=volume_type%20%20%20%20%20%20%20%20%20%20%20%3D%20%22gp2%22 "gp2")                                                                                                                                                                      |
+| Volume size   | [8 GB](https://github.com/OlesYudin/VPN-Config/blob/main/variables.tf#:~:text=variable%20%22volume_size%22%20%7B,%7D "8 GB")                                                                                                                                                                                    |
 
 ## Guide for OpenVPN installer
 
