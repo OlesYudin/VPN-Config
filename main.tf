@@ -69,7 +69,7 @@ resource "aws_instance" "vpn" {
   associate_public_ip_address = true                           # Give public IP to instance
   vpc_security_group_ids      = [aws_security_group.sg_vpn.id] # Attache SG to EC2. By defaulr open port 22, 2222
   key_name                    = var.ssh_key                    # Change value of this variable before apply
-  user_data                   = file("./script.sh")            # Script that run with installation EC2 
+  user_data                   = file("./scripts/script.sh")    # Script that run with installation EC2 
 
   # Configuration of memory
   root_block_device {
