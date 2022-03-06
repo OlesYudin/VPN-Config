@@ -34,4 +34,4 @@ override.tf.json
 terraform.rc
 
 # Ignore lock.hcl
-*.lock.hcl
+.terraform.lock.hcl
