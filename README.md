@@ -31,7 +31,7 @@ sudo ./openvpn-install.sh
 But, in this case you need manualy configure server.
 For automatic installation, you need to pass variables along with the installation command
 
-List of variables that pass with installation command (y=yes; n=no):
+**<div align="center">List of variables that pass with installation command (y=yes; n=no):</div>**
 
 | Variable            | Value                  | Description                                                                                                                |
 | ------------------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------- |
