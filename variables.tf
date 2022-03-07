@@ -27,7 +27,7 @@ variable "sg_port" {
   description = "Allowed EC2 ports"
   type        = map(any)
   default = {
-    "22"   = ["X.X.X.X/32"] # Change IP-address for you own public IP
-    "2222" = ["0.0.0.0/0"]  # Open port 2222 to all internet
+    "22"   = ["0.0.0.0/0"] # Change this CIDR to your own public IP (Example: 18.56.143.12/32)
+    "2222" = ["0.0.0.0/0"] # Open port 2222 to all internet
   }
 }
