@@ -86,3 +86,17 @@ resource "aws_instance" "vpn" {
     Description = "OpenVPN Server based on Ubuntu 16.04"
   }
 }
+
+
+# Block for executing command in local machine
+# This command will has delay for 2 minutes, then ssh connect w/o first asking for permission, download OpenVPN config from running server and install it to home directory of current user 
+# P.S. Delay need to do full config and only after configuration finish will install .ovpn file
+resource "null_resource" "install_config" {
+  provisioner "local-exec" {
+    command = "sleep 2m && ssh -o StrictHostKeyChecking=no -i ~/.ssh/app_key.pem ubuntu@$VPN_IP 'sudo cat /home/$USER/user.ovpn' > /home/$USER/user.ovpn"
+    environment = {
+      VPN_IP = aws_instance.vpn.public_ip
+    }
+  }
+  depends_on = [aws_instance.vpn]
+}
