@@ -26,6 +26,3 @@ sudo AUTO_INSTALL=y APPROVE_INSTALL=y ENDPOINT=$(curl -4 ifconfig.co) APPROVE_IP
 
 # Move OpenVPN config to root folder of ubuntu user
 mv /root/user.ovpn /home/ubuntu/
-
-# Copy OpenVPN config to local machine
-# ssh -i ~/.ssh/app_key.pem ubuntu@SERVER_IP_ADDRESS 'sudo cat /home/ubuntu/user.ovpn' > ~/user.ovpn
